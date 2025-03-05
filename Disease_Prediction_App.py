@@ -99,7 +99,7 @@ def load_models():
 
     }
 
-models = load_models()
+Models = load_models()
 
 with st.sidebar:
     st.markdown("<h1 style='text-align: center; color: white;'>Health Prediction</h1>", unsafe_allow_html=True)
