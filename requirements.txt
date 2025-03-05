@@ -1,7 +1,5 @@
 streamlit
-joblib
 streamlit_option_menu
 numpy
-sklearn.linear_model
-sklearn.model_selection
-sklearn.datasets
+pandas
+scikit-learn
