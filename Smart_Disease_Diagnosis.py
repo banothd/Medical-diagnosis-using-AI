@@ -29,7 +29,7 @@ with st.sidebar:
     selected = option_menu(
         "Disease Prediction",
         ["Diabetes Prediction", "Heart Disease Prediction", "Parkinsons Prediction", "Lung Cancer Prediction", "Hypo-Thyroid Prediction"],
-        icons=["activity", "heart", "person", "lungs", "clipboard2-pulse", "clock-history"],
+        icons=["activity", "heart", "person", "lungs", "clipboard2-pulse"],
         menu_icon="hospital",
         default_index=0,  # Ensures no page is selected by default
         styles={
