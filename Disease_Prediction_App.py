@@ -139,11 +139,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 @st.cache_resource
 def load_models():
     return {
-        'diabetes': joblib.load(BASE_DIR / 'diabetes_model.sav'),
-        'heart_disease': joblib.load(BASE_DIR / 'heart_disease_model.sav'),
-        'parkinsons': joblib.load(BASE_DIR / 'parkinsons_model.sav'),
-        'lung_cancer': joblib.load(BASE_DIR / 'lungs_disease_model.sav'),
-        'thyroid': joblib.load(BASE_DIR / 'Thyroid_model.sav')
+        'diabetes': joblib.load(os.path.join(BASE_DIR, 'diabetes_model.sav')),
+        'heart_disease': joblib.load(os.path.join(BASE_DIR, 'heart_disease_model.sav')),
+        'parkinsons': joblib.load(os.path.join(BASE_DIR, 'parkinsons_model.sav')),
+        'lung_cancer': joblib.load(os.path.join(BASE_DIR, 'lungs_disease_model.sav')),
+        'thyroid': joblib.load(os.path.join(BASE_DIR, 'Thyroid_model.sav'))
     }
 
 models = load_models()
