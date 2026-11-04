@@ -4,7 +4,6 @@ from streamlit_option_menu import option_menu
 import numpy as np
 from user_auth import user_authentication
 import pandas as pd
-from pathlib import Path
 import os
 
 # ✅ Set page title and icon
