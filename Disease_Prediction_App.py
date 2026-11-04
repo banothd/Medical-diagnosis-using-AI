@@ -133,17 +133,16 @@ background-color: rgba(0, 0, 0, 0.6);
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Function to load models using joblib
+BASE_DIR = Path(__file__).resolve().parent
+
 @st.cache_resource
 def load_models():
     return {
-        'diabetes': joblib.load(open('Models/diabetes_model.sav', 'rb')),
-        'heart_disease': joblib.load(open('Models/heart_disease_model.sav', 'rb')),
-        'parkinsons': joblib.load(open('Models/parkinsons_model.sav', 'rb')),
-        'lung_cancer': joblib.load(open('Models/lungs_disease_model.sav', 'rb')),
-        'thyroid': joblib.load(open('Models/Thyroid_model.sav', 'rb'))
-
-
+        'diabetes': joblib.load(BASE_DIR / 'diabetes_model.sav'),
+        'heart_disease': joblib.load(BASE_DIR / 'heart_disease_model.sav'),
+        'parkinsons': joblib.load(BASE_DIR / 'parkinsons_model.sav'),
+        'lung_cancer': joblib.load(BASE_DIR / 'lungs_disease_model.sav'),
+        'thyroid': joblib.load(BASE_DIR / 'Thyroid_model.sav')
     }
 
 models = load_models()
