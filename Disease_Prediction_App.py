@@ -171,16 +171,6 @@ def predict_disease(model_key, inputs):
         st.success(diagnosis)
 
 
-  # Load the saved models
-models = {
-    'diabetes': joblib.load(open('Models/diabetes_model.sav', 'rb')),
-    'heart_disease': joblib.load(open('Models/heart_disease_model.sav', 'rb')),
-    'parkinsons': joblib.load(open('Models/parkinsons_model.sav', 'rb')),
-    'lung_cancer': joblib.load(open('Models/lungs_disease_model.sav', 'rb')),
-    'thyroid': joblib.load(open('Models/Thyroid_model.sav', 'rb'))
-}
-
-
 def display_input(label, tooltip, key, type="text"):
     if type == "text":
         return st.text_input(label, key=key, help=tooltip)
