@@ -5,6 +5,7 @@ import numpy as np
 from user_auth import user_authentication
 import pandas as pd
 from pathlib import Path
+import os
 
 # ✅ Set page title and icon
 st.set_page_config(page_title="Smart Disease Diagnosis", page_icon="⚕️", layout="wide")
@@ -133,7 +134,7 @@ background-color: rgba(0, 0, 0, 0.6);
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @st.cache_resource
 def load_models():
