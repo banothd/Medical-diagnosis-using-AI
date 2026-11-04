@@ -8,7 +8,7 @@ import os
 
 # ✅ Set page title and icon
 st.set_page_config(page_title="Smart Disease Diagnosis", page_icon="⚕️", layout="wide")
-
+ 
 # 🔒 Ensure user authentication before accessing the app
 if "logged_in" not in st.session_state:
     st.session_state["logged_in"] = False
@@ -132,7 +132,6 @@ background-color: rgba(0, 0, 0, 0.6);
 </style>
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @st.cache_resource
