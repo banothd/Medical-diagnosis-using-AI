@@ -133,8 +133,6 @@ background-color: rgba(0, 0, 0, 0.6);
 """
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-from pathlib import Path
-
 BASE_DIR = Path(__file__).resolve().parent
 
 @st.cache_resource
